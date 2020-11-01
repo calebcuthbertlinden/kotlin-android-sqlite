@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/habitTitle"
+                  android:hint="@string/add_habit_title"/>
+
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/habitDescription" android:hint="@string/habit_description"/>
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/choose_image" android:onClick="chooseImage"/>
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      android:id="@+id/imagePreview"
+                                                      android:layout_gravity="center_horizontal"
+                                                      android:padding="@dimen/padding_basic"
+                                                      android:contentDescription="@string/fallback_image"/>
+
+        <Button android:layout_width="match_parent" android:id="@+id/btnSave" android:layout_height="wrap_content"
+                android:text="@string/save_habit" android:onClick="storeHabit"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/errorText" android:textColor="#893223"/>
+
+    </LinearLayout>
+
+</ScrollView>
